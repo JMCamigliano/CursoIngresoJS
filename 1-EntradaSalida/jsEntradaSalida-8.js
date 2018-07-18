@@ -8,19 +8,13 @@ function SacarResto()
 	var divisor;
 	var resultado;
 
-	dividendo=document.getElementById('numeroDividendo').value;
-	dividendo=parseInt(dividendo);
-	divisor=document.getElementById('numeroDivisor').value;
-	divisor=parseInt(divisor);
-	resultado=dividendo%divisor;
-	alert("El resto es " + resultado);
+	numeroDividendo=document.getElementById('numeroDividendo').value;
+	numeroDividendo=parseInt (numeroDividendo);
+	numeroDivisor=document.getElementById('numeroDivisor').value;
+	numeroDivisor=parseInt (numeroDivisor);
 
-/*
+	resultado=numeroDividendo%numeroDivisor;
 
-% nos devuelve el resto de una division.
+	alert ("El resto es " + resultado);
 
-*/
 }
-
-
-
