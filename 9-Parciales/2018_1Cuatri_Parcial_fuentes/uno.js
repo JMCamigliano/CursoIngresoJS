@@ -1,20 +1,16 @@
 
 function mostrar()
 {
-	var ancho;
-	var largo;
-	var resultado;
+	var base;
+	var altura;
+	var superficie;
+	var perímetro;
 
-	ancho=prompt("Por favor, ingrese el ancho del rectángulo");
-	largo=prompt("Por favor, ingrese el largo del rectángulo");
+	base=prompt("Ingrese la base del triángulo");
+	altura=prompt("Ingrese la altura del triángulo");
 
-	/*ancho=document.getElementById('ancho').value;
-	ancho=parseINT(ancho);
-	largo=document.getElementById('largo').value;
-	largo=parseINT(largo);*/
+	superficie=(base*altura)/2;
+	perímetro=base*3;
 
-	resultado=(largo*ancho)*2;
-
-	alert ("El perímetro del rectángulo es " + resultado);
-
+	alert ("La superficie del triángulo es " +superficie+ " y el perímetro es " +perímetro);
 }
