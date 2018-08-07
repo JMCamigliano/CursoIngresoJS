@@ -1,16 +1,15 @@
 
 function mostrar()
 {
-	var base;
-	var altura;
-	var superficie;
-	var perímetro;
+	var ancho;
+	var largo;
+	var perimetro;
 
-	base=prompt("Ingrese la base del triángulo");
-	altura=prompt("Ingrese la altura del triángulo");
+	ancho=prompt("Ingrese el ancho del rectángulo");
+	largo=prompt("Ingrese el largo del rectángulo");
 
-	superficie=(base*altura)/2;
-	perímetro=base*3;
+	perimetro=2*largo + 2*ancho;
 
-	alert ("La superficie del triángulo es " +superficie+ " y el perímetro es " +perímetro);
+	alert ("El perímetro del rectángulo es "+perimetro);
+
 }
