@@ -1,59 +1,82 @@
-/*
-MARIA F 15
-JOSE  M 33	
-FER	  F 25
-
-Pedir
-
-Nombre
-Sexo
-Edad
-
-No puede ser mayor a 0 y no puede ser menor a 100
-*/
 function mostrar()
-
-{	
-
+{
 	var nombre;
-	var sexo;
-	var edad;
+	var ancho;
+	var alto;
+	var peso;
 	var contador;
-	var respuesta;
-	respuesta="si!"
-	contador=0
+	var masPesado;
+	var masAlto;
+	var menorAncho;
+	var contador300E600;
 
+	contador=0;
+	contador300E600=0;
+	
+	while(contador<5){
 
-	while(contador<3){
+		contador++
+		nombre=prompt("Ingrese el nombre del producto");
 
-		nombre=prompt ("Ingrese su nombre");
-		sexo=prompt ("Ingrese sexo");
+		ancho=prompt("Ingrese el ancho del producto");
+		ancho=parseInt(ancho);
 
-		while(sexo!="f" && sexo!="m"){
+		while (ancho<0 || ancho>10){
 
-			sexo=prompt("ERROR, Ingrese un sexo");}
-
-		edad=prompt ("Ingrese su edad");
-		edad=ParseInt(edad);
-		
-		while(isNaN (edad)|| edad>100||edad<0){
-
-		edad=prompt ("Edad invalida");
-		edad=ParseInt(edad);
+			ancho=prompt("Ingrese el ancho del producto");
+			ancho=parseInt(ancho);
 		}
 
-		contador+1;
+		alto=prompt("Ingrese el alto del producto");
+		alto=parseInt(alto);
 
+		while (alto<0 || alto>10){
+
+			alto=prompt("Ingrese el alto del producto");
+			alto=parseInt(alto);
+		}
+
+		peso=prompt("Ingrese el peso del producto");
+		peso=parseInt(peso);
+
+		while (peso<0 || peso>1000){
+
+			peso=prompt("Ingrese el peso del producto");
+			peso=parseInt(peso);
+		}
+
+		if(contador == 1){
+
+			masAlto=alto;
+			masPesado=peso;
+			menorAncho=ancho;
+		}else
+
+		{
+			if(alto>masAlto){
+
+				masAlto=alto;
+			}
+
+			if(peso>masPesado){
+
+				masPesado=peso;
+			}
+
+			if(ancho<menorAncho){
+
+				menorAncho=ancho;
+			}
+		}
+
+		if (peso>300 && peso<600){
+
+			contador300E600=contador+1
+
+			}
 
 	}
-
-		respuesta = prompt("Ingrese no para salir");
-	
-
-
-		var cantidadMujeres;
-		var cantidadVarores;
-		var cantidadMenores;
-		var cantidadMayores;
+		
+	alert("El mas pesado es " +masPesado+ " la altura mas alta es "+masAlto+ " el menor ancho es "+menorAncho+" y la cantidad que tiene un peso entre 300 y 600 kilos es "+contador300E600);	
 
 }
